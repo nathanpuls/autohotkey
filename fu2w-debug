@@ -1,0 +1,118 @@
+#Requires AutoHotkey v2.0
+
+DebugSleep := 1000  ; 1 second between actions
+
+!4:: {
+
+    Send "{Tab 8}{Right}{Left}" ; Location Home
+    Sleep DebugSleep
+
+    Send "{Tab 15}{Right}{Left}" ; Reviewed
+    Sleep DebugSleep
+
+    Send "{Tab 3}{Right}" ; Psychotherapy
+    Sleep DebugSleep
+
+    Send "+{Tab 24}{Enter}" ; MSE/Risk
+    Sleep DebugSleep
+
+    Send "{Tab 5}{Right}{Left}" ; Patient Denies
+    Sleep DebugSleep
+
+    Send "{Tab 28}" ; Mood
+    Sleep DebugSleep
+
+    SendText "Euthymic"
+    Sleep DebugSleep
+
+    Send "{Tab 4}" ; Affect
+    Sleep DebugSleep
+
+    SendText "Appropriate"
+    Sleep 2000
+
+    MsgBox "About to Shift+Tab 36 to Assessment/Plan"
+
+    Loop 36
+    {
+        Send "+{Tab}"
+        Sleep 250
+    }
+
+    Send "{Enter}"
+    Sleep 2000
+
+    MsgBox "About to tab to Supervisory Protocol"
+
+    Send "{Tab 29}{Right}" ; Supervisory Protocol
+    Sleep DebugSleep
+
+    Send "{Tab 8}{Right}" ; Telehealth
+    Sleep DebugSleep
+
+    Send "{Tab 1}{Right 2}" ; E&M Only
+    Sleep DebugSleep
+
+    Send "{Tab 4}{Space}" ; 99214T
+    Sleep DebugSleep
+
+    Send "{Tab 3}{Right}" ; Complexity-Based Billing
+    Sleep DebugSleep
+
+    MsgBox "About to move to Follow-Up Appointment"
+
+    Loop 19
+    {
+        Send "+{Tab}"
+        Sleep 250
+    }
+
+    SendText "See Scheduler or Timeline"
+    Sleep DebugSleep
+
+    Send "{Tab 8}{Space}" ; Fill From Problem List
+    Sleep DebugSleep
+
+    MsgBox "About to move to Assessment and Plans"
+
+    Loop 17
+    {
+        Send "+{Tab}"
+        Sleep 250
+    }
+
+    Sleep DebugSleep
+
+    MsgBox "About to move to PFSH"
+
+    Loop 19
+    {
+        Send "+{Tab}"
+        Sleep 250
+    }
+
+    Send "{Enter}"
+    Sleep DebugSleep
+
+    Send "{Tab 11}{Right}{Left}" ; Medical History: Adult
+    Sleep DebugSleep
+
+    MsgBox "About to return to Assessment / Plans"
+
+    Loop 9
+    {
+        Send "+{Tab}"
+        Sleep 250
+    }
+
+    Send "{Enter}"
+    Sleep DebugSleep
+
+    Send "{Tab 17}"
+    Sleep DebugSleep
+
+    Send "^{Home}" ; Assessment and Plans
+    Sleep DebugSleep
+
+    Send "{Down 20}"
+}
