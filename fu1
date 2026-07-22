@@ -1,0 +1,73 @@
+#Requires AutoHotkey v2.0
+
+!2:: {
+    Send "{Tab 8}{Right}{Left}" ; Location Home
+    Sleep 300
+
+    Send "{Tab 15}{Right}{Left}" ; Reviewed
+    Sleep 300
+
+    Send "{Tab 3}{Right}" ; Psychotherapy
+    Sleep 300
+
+    Send "+{Tab 24}{Enter}" ; MSE/Risk
+    Sleep 300
+
+    Send "{Tab 5}{Right}{Left}" ; Patient Denies
+    Sleep 300
+
+    Send "{Tab 28}" ; Mood
+    Sleep 300
+
+    SendEvent "Euthymic"
+    Sleep 500
+
+    Send "{Tab 4}" ; Affect
+    Sleep 300
+
+    SendEvent "Appropriate"
+    Sleep 1500
+
+    Send "+{Tab 36}{Enter}" ; Assessment/Plan
+    Sleep 1000
+
+    Send "{Tab 29}{Right}" ; Supervisory Protocol
+    Sleep 1000
+
+    Send "{Tab 8}{Right}" ; Telehealth
+    Sleep 1000
+
+    Send "{Tab 1}{Right 2}" ; E&M Only
+    Sleep 1000
+
+    Send "{Tab 4}{Space}" ; 99214T
+    Sleep 1000
+
+    Send "{Tab 3}{Right}" ; Complexity-Based Billing
+
+    Send "+{Tab 19}" ; Follow-Up Appointment
+    Sleep 1000
+
+    SendEvent "See Scheduler or Timeline"
+    Sleep 1000
+
+    Send "{Tab 8}{Space}" ; Fill From Problem List
+
+    Send "+{Tab 17}" ; Assessment and Plans
+    Sleep 1000
+
+    Send "+{Tab 19}{Enter}" ; PFSH
+    Sleep 1000
+
+    Send "{Tab 11}{Right}{Left}" ; Medical History: Adult
+
+    Send "+{Tab 9}{Enter}" ; Assessment / Plans
+    Sleep 1000
+
+    Send "{Tab 17}"
+    Sleep 1000
+
+    Send "^{Home}" ; Assessment and Plans
+
+    Send "{Down 20}"
+}
